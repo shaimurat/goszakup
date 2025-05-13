@@ -9,29 +9,58 @@
   color: #2c3e50;
   margin-bottom: 40px;
 }
-.price-filter-label {
+
+.filters {
   display: flex;
-  align-items: center;
-  color: #0080ff;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.filter-group {
+  flex: 1 1 30%;
+  min-width: 220px;
+  background-color: #f4f4f4;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.div-title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.price-filter-label {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   font-weight: 500;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  font-size: 13px;
 }
 
 .price-filter-select {
-  padding: 6px 10px;
-  border: 1px solid #ccc;
+  margin: 5px;
+  padding: 10px 20px;
+  border: 1px solid #bbb;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 13px;
   background-color: #fff;
   transition: border 0.2s ease;
 }
 
-.price-filter-select:focus {
-  outline: none;
-  border-color: #007bff;
-}
+.price-filter-select:focus,
 .price-filter-select:hover {
+  outline: none;
   border-color: #007bff;
 }

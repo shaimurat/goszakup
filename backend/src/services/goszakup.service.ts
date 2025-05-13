@@ -11,7 +11,7 @@ export class GoszakupService {
         system_id__in: 1,
         delivery_address_id__in: 23248,
         limit: 10,
-        q: 'работа ( строительство, реконструкция, кап.ремонт и тд)',
+        q: 'работа ( строительство, реконструкция, кап.ремонт)',
       };
 
       const finalParams = { ...defaultParams, ...params };

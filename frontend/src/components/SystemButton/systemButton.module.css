@@ -12,7 +12,8 @@
 }
 
 .systemButton:hover {
-  background-color: #007bff;
+    border-color: #005bbd;
+  background-color: #005bbd;
   color: white;
 }
 
