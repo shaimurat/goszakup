@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { IMitworkLot } from '../interfaces/mitwork.interface';
+import { MitworkLot } from '../interfaces/mitwork.interface';
 import { apiConfig } from '../utils/api.config';
 
 export class MitworkService {
   private readonly apiUrl = 'https://zakup.gov.kz/api/core/api/core/_lots';
 
-  async getLots(): Promise<IMitworkLot[]> {
+  async getLots(): Promise<MitworkLot[]> {
     try {
       const response = await axios.get(this.apiUrl, {
         params: {
@@ -16,7 +16,7 @@ export class MitworkService {
         headers: apiConfig.headers,
       });
 
-      return response.data.results as IMitworkLot[];
+      return response.data.results as MitworkLot[];
     } catch (error) {
       console.error('Error fetching mitwork lots:', error);
       throw error;

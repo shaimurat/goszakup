@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { ISamrukLot } from '../interfaces/samruk.interface';
+import { SamrukLot } from '../interfaces/samruk.interface';
 import { apiConfig } from '../utils/api.config';
 
 export class SamrukService {
   private readonly apiUrl = 'https://zakup.gov.kz/api/core/api/core/_lots';
 
-  async getLots(): Promise<ISamrukLot[]> {
+  async getLots(): Promise<SamrukLot[]> {
     try {
       const response = await axios.get(this.apiUrl, {
         params: {
@@ -16,7 +16,7 @@ export class SamrukService {
         headers: apiConfig.headers,
       });
 
-      return response.data.results as ISamrukLot[];
+      return response.data.results as SamrukLot[];
     } catch (error) {
       console.error('Error fetching samruk lots:', error);
       throw error;

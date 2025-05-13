@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { IGoszakupLot } from '../interfaces/goszakup.interface';
+import { GoszakupLot } from '../interfaces/goszakup.interface';
 import { apiConfig } from '../utils/api.config';
 
 export class GoszakupService {
   private readonly apiUrl = 'https://zakup.gov.kz/api/core/api/core/_lots';
 
-  async getLots(): Promise<IGoszakupLot[]> {
+  async getLots(): Promise<GoszakupLot[]> {
     try {
       const response = await axios.get(this.apiUrl, {
         params: {
@@ -16,7 +16,7 @@ export class GoszakupService {
         headers: apiConfig.headers,
       });
 
-      return response.data.results as IGoszakupLot[];
+      return response.data.results as GoszakupLot[];
     } catch (error) {
       console.error('Error fetching goszakup lots:', error);
       throw error;

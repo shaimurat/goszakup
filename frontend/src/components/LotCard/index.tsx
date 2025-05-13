@@ -46,6 +46,7 @@ const LotCard: React.FC<LotCardProps> = ({ lot }) => {
             <p><strong>Организация:</strong> {lot.organization_name}</p>
             <p><strong>Номер лота:</strong> {lot.lot_number}</p>
             <p><strong>Метод закупки:</strong> {lot.purchase_method_name}</p>
+            <p><strong>Статус лота:</strong> {lot.status.name}</p>
             <p><strong>Дата подач заявлений:</strong> {formatDate(lot.offer_start_date)} - {formatDate(lot.offer_end_date)}</p>
         
           </div>

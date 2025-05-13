@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import LotSection from './components/LotSection';
-import { Lot } from './interfaces/lot';
+import { GoszakupLot, MitworkLot, SamrukLot } from './interfaces/lot';
 import { fetchLots } from './services/api';
 import './styles/global.css';
 
 const App: React.FC = () => {
-  const [goszakupLots, setGoszakupLots] = useState<Lot[]>([]);
-  const [mitworkLots, setMitworkLots] = useState<Lot[]>([]);
-  const [samrukLots, setSamrukLots] = useState<Lot[]>([]);
+  const [goszakupLots, setGoszakupLots] = useState<GoszakupLot[]>([]);
+  const [mitworkLots, setMitworkLots] = useState<MitworkLot[]>([]);
+  const [samrukLots, setSamrukLots] = useState<SamrukLot[]>([]);
 
   useEffect(() => {
     const loadData = async () => {
