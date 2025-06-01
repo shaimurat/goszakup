@@ -1,0 +1,93 @@
+.card {
+  background: #dbdbdb;
+  position: relative; /* Нужно для абсолютного позиционирования логотипа внутри */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  font-weight: bold;
+  color: #27ae60;
+  margin-left: 15px;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.details {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.content {
+  margin-bottom: 10px;
+}
+
+.content p {
+  margin: 6px 0;
+  color: #34495e;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link {
+  display: inline-block;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #2980b9;
+}
+
+.logoWrapper {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  opacity: 0.8;
+}

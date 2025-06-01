@@ -1,0 +1,23 @@
+/* src/components/systemButton.module.css */
+.systemButton {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+
+.systemButton:hover {
+    border-color: #005bbd;
+  background-color: #005bbd;
+  color: white;
+}
+
+.active {
+  background-color: #007bff;
+  color: white;
+}
